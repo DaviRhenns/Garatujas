@@ -1,54 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>perfil</title>
     <style>
-        main {
-            border: 4px solid red;
-        }
-        main aside {
-           border: 4px solid blue; 
-           width: 350px;
-           display: inline-block;
-           vertical-align: top;
-        }
-        main aside .thumb {
-            border: 4px solid green;
-        }
-        main aside .thumb img {
-            width: 100%;
-        }
-        main aside section {
-            border: 4px solid orange;
-            width: 100%;
-            box-sizing: border-box;
-            
-        }
-        main section {
-            border: 4px solid purple;
-            display: inline-block;
-            width: 1000px;
-        }
-    </style>
+    /* https://github.com/drachehavoc/ia26-webdesign */
+
+    body {
+        background-color: rgb(18,18,18);
+        color: rgb(231, 231, 231);
+        font-family: 'Roboto', sans-serif;
+    }
+    main {
+      /*padding: 1em;*/
+      display: grid;
+      grid-template-columns: 350px 1fr;
+      
+    }
+
+    main aside {
+      border: 1px solid rgb(63, 63, 63);
+      padding: 1em;
+    }
+
+    main aside .thumb img {
+      width: 100%;
+    }
+
+    main > section {
+        border: 1px solid rgb(63, 63, 63);
+        padding: 1em;
+    }
+    header {
+        background-color: rgb(0, 12, 28);
+        padding: 1%;
+        text-align: center;
+    }
+    .galeria {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 200px); 
+        /*justify-content: center; Centraliza a galeria na tela */
+    }
+
+    .galeria img {
+        width: 200px;  /* Largura fixa */
+        height: 300px; /* Altura fixa */
+        object-fit: cover; /* Importante: corta a imagem para preencher sem distorcer */
+        display: block;
+    }
+
+
+  </style>
 </head>
 <body>
+    <header><h1>PERSONAGEM</h1></header>
     <main>
         <aside>
             <div class="thumb">
                 <img src="image.png" alt="foto do matrix">
             </div>
             <section>
-                <h1>dados</h1>
+                <h1>DADOS</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto culpa asperiores exercitationem at fugit, 
                     similique labore autem aliquid possimus sequi. Debitis dolorem eos rerum pariatur reiciendis, deserunt libero 
                     impedit corporis!</p>
             </section>
         </aside>
         <section>
-            <h2>historico</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, beatae. Perspiciatis, libero magni, laudantium minus error vitae est unde quod alias laborum voluptatum eius sapiente ea, illo eum quos sed. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam consectetur hic alias, assumenda dolore nobis doloremque saepe sint et molestias dolor aspernatur reiciendis deserunt fugiat mollitia, modi repellat, consequatur praesentium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sequi officiis quo similique eaque dolore impedit culpa maxime accusamus magni nemo numquam nesciunt incidunt quidem voluptatibus voluptates reprehenderit, tenetur expedita?</p>
+            <h2>HISTÓRICO</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, beatae. Perspiciatis, libero magni, laudantium 
+                minus error vitae est unde quod alias laborum voluptatum eius sapiente ea, illo eum quos sed. Lorem ipsum dolor 
+                sit amet consectetur adipisicing elit. Nam consectetur hic alias, assumenda dolore nobis doloremque saepe sint et 
+                molestias dolor aspernatur reiciendis deserunt fugiat mollitia, modi repellat, consequatur praesentium. Lorem ipsum 
+                dolor sit amet consectetur adipisicing elit. Obcaecati sequi officiis quo similique eaque dolore impedit culpa maxime a
+                ccusamus magni nemo numquam nesciunt incidunt quidem voluptatibus voluptates reprehenderit, tenetur expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veritatis tempora sunt dignissimos ipsam beatae enim at, possimus consectetur sequi iure culpa rem eaque dolore, quae ipsa exercitationem assumenda dicta. </p>
 
-            <h2>galeria</h2>
+            <h2>GALERIA</h2>
 
             <div class="galeria">
                 <img src="https://picsum.photos/200/300?2" alt="descricao da imagem" title="titulo">
@@ -65,7 +92,6 @@
                 <img src="https://picsum.photos/200/300?33" alt="descricao da imagem" title="titulo">
                 <img src="https://picsum.photos/200/300?44" alt="descricao da imagem" title="titulo">
                 <img src="https://picsum.photos/200/300?55" alt="descricao da imagem" title="titulo">
-                <img src="https://picsum.photos/200/300?66" alt="descricao da imagem" title="titulo">
             </div>
         </section>
     </main>
