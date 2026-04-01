@@ -7,27 +7,32 @@
     /* https://github.com/drachehavoc/ia26-webdesign */
 
     body {
-        background-color: rgb(18,18,18);
+        background-color: rgb(0, 12, 28);
         color: rgb(231, 231, 231);
         font-family: 'Roboto', sans-serif;
     }
     main {
       /*padding: 1em;*/
+      background-color: rgb(19, 19, 19);
       display: grid;
       grid-template-columns: 350px 1fr;
-      
+      margin: 1%;
     }
 
     main aside {
+      box-sizing: border-box;
       border: 1px solid rgb(63, 63, 63);
       padding: 1em;
     }
 
     main aside .thumb img {
       width: 100%;
+       border: 1px solid rgb(63, 63, 63);
+       box-sizing: border-box;
     }
 
-    main > section {
+    main section {
+        box-sizing: border-box;
         border: 1px solid rgb(63, 63, 63);
         padding: 1em;
     }
