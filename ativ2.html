@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Denuncie IFC</title>
+    <style>
+        body {
+            font-family: Roboto, sans-serif;
+            text-align: center;
+        }
+        .escondido {
+            display: none;
+        }
+        
+        form:has(#check:checked) .escondido {
+            display: block;
+        }
+        form {
+
+        }
+    </style>
+</head>
+<body>
+    <head>Denuncie IFC</head>
+
+    <form action="get">
+        <div>
+            <label for="">deseja se identificar?</label>
+            <input type="checkbox" id="check">
+        </div> 
+
+        <div class="escondido">
+            <label for="">Nome Completo</label>
+            <input type="text">
+        </div> 
+
+        <div>
+            <label for="">selecione o tipo de denuncia</label>
+            <select name="Tipo de denuncia">
+                <option>mal comportamento discente</option>
+                <option>mal comportamento docente</option>
+                <option>estrutura escolar degradada</option>
+                <option>patrimonio publico estragado</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="">Faça sua denuncia</label>
+            <input type="text">
+        </div>    
+        <button>Enviar Resposta</button>
+    </form>
+</body>
+</html>
