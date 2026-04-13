@@ -6,23 +6,54 @@
     <title>Denuncie IFC</title>
     <style>
         body {
+            margin: 0;
             font-family: Roboto, sans-serif;
             text-align: center;
         }
         .escondido {
             display: none;
         }
-        
+
         form:has(#check:checked) .escondido {
             display: block;
         }
-        form {
 
+        form:has(#toggleDiv1:checked) .div1 .div_button1 {
+            display: block;
         }
+
+        form:has(#toggleDiv2:checked) .div2 .div_button2 {
+            display: block;
+        }
+
+        form {
+            width: 80%;
+            display: inline-block;
+            margin-top: 1%;
+        }
+        div {
+            text-align: left;
+            margin: 1%
+        }
+        header {
+            padding: 0.5%;
+            background-color: rgb(33, 116, 0);
+            color:rgb(255, 255, 255);
+        }
+        .div1 {
+            display: none;
+        }
+        .div2 {
+            display: none;
+        }
+        .button1 .button2  {
+            display: block;
+        }
+
     </style>
 </head>
 <body>
-    <head>Denuncie IFC</head>
+    <header><h1>Denuncie IFC</h1></header>
 
     <form action="get">
         <div>
@@ -31,21 +62,36 @@
         </div> 
 
         <div class="escondido">
-            <label for="">Nome Completo</label>
+            <label for="">Nome Completo:</label>
+            <input type="text">
+            
+            <label for="">Turma:</label>
             <input type="text">
         </div> 
 
-        <div>
+        <div class="div_button1">
+            <label for="toggleDiv1" class="button1">Próximo</label>
+            <input type="checkbox" id="toggleDiv1" hidden>
+        </div>
+        
+        <div class="div1">
             <label for="">selecione o tipo de denuncia</label>
             <select name="Tipo de denuncia">
                 <option>mal comportamento discente</option>
                 <option>mal comportamento docente</option>
                 <option>estrutura escolar degradada</option>
-                <option>patrimonio publico estragado</option>
+                <option>falta de qualidade da comida no restaurante ou da cantina</option>
+                <option>falta de seguranca na escola</option>
+                <option>assedio ou estupro</option>
             </select>
         </div>
 
-        <div>
+        <div class="div_button2">
+            <label for="toggleDiv2" class="button2">Próximo</label>
+            <input type="checkbox" id="toggleDiv2" hidden>
+        </div>
+
+        <div class="div2">
             <label for="">Faça sua denuncia</label>
             <input type="text">
         </div>    
