@@ -9,8 +9,13 @@
             margin: 0;
             font-family: Roboto, sans-serif;
             text-align: center;
+            color: rgb(45, 45, 45);
         }
         .escondido {
+            display: none;
+        }
+
+        button {
             display: none;
         }
 
@@ -18,11 +23,26 @@
             display: block;
         }
 
-        form:has(#toggleDiv1:checked) .div1 .div_button1 {
+        form:has(#toggleDiv1:checked) .div1 {
             display: block;
         }
 
-        form:has(#toggleDiv2:checked) .div2 .div_button2 {
+        
+
+        form:has(#toggleDiv1:checked) .div_anterior1 {
+            display: block;
+        }
+
+
+        form:has(#toggleDiv1:checked) .div_button2 {
+            display: block;
+        }
+
+        form:has(#toggleDiv2:checked) .div2  {
+            display: block;
+        }
+        
+        form:has(#toggleDiv2:checked) button {
             display: block;
         }
 
@@ -32,8 +52,18 @@
             margin-top: 1%;
         }
         div {
-            text-align: left;
-            margin: 1%
+            text-align: center;
+            margin: 1%;
+            width: 100%;
+            padding: 1%;
+            border-radius: 10px;
+            background-color: rgb(250, 250, 250);
+            border: 1px solid rgb(217, 217, 217);
+        }
+        form > div {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            
+            font-size: 120%;
         }
         header {
             padding: 0.5%;
@@ -46,9 +76,50 @@
         .div2 {
             display: none;
         }
-        .button1 .button2  {
-            display: block;
+        .div_button2  {
+            display: none;
         }
+        
+        .div_SN:has(#check:checked) .labelS {
+            color: red;
+        }
+
+        .div_SN:has(#checkN:checked) .labelN {
+            color: red;
+        }
+        
+        .texto_denuncia {
+            width: 1000px;
+        }
+
+        .div_esc_filho {
+            width: 96%;
+        }
+
+       .div_button1 {
+            background-color: rgb(33, 116, 0);
+            color: rgb(247, 247, 247);
+            width: 50%;
+            display: inline-block;
+       }
+
+       .div_button1:hover {
+            transform: scale(1.05);
+            background-color: rgb(26, 93, 0);
+       }
+       input:hover {
+            transform: scale(1.02);
+       }
+       div:hover {
+            transform: scale(1.02);
+       }
+       option:hover {
+            background-color: rgb(159, 159, 159);
+       }
+
+       .denuncias_type {
+        width: 96%;
+       }
 
     </style>
 </head>
@@ -56,17 +127,25 @@
     <header><h1>Denuncie IFC</h1></header>
 
     <form action="get">
-        <div>
+        <div class="div_SN">
             <label for="">deseja se identificar?</label>
-            <input type="checkbox" id="check">
+            <label for="check" class="labelS">SIM</label>
+            <input type="radio" id="check" name="SN" hidden>
+            <label for="checkN" class="labelN">NAO</label>
+            <input type="radio" id="checkN" name="SN" hidden>
         </div> 
 
         <div class="escondido">
-            <label for="">Nome Completo:</label>
-            <input type="text">
+            <div class="div_esc_filho">
+                <label for="">Nome Completo:</label>
+                <input type="text">
+            </div>
             
-            <label for="">Turma:</label>
-            <input type="text">
+            <div class="div_esc_filho">
+                <label for="">Turma:</label>
+                <input type="text">
+            </div>
+            
         </div> 
 
         <div class="div_button1">
@@ -75,15 +154,37 @@
         </div>
         
         <div class="div1">
-            <label for="">selecione o tipo de denuncia</label>
-            <select name="Tipo de denuncia">
-                <option>mal comportamento discente</option>
-                <option>mal comportamento docente</option>
-                <option>estrutura escolar degradada</option>
-                <option>falta de qualidade da comida no restaurante ou da cantina</option>
-                <option>falta de seguranca na escola</option>
-                <option>assedio ou estupro</option>
-            </select>
+            <label for="" class="tipo">selecione o tipo de denuncia</label>
+                <div class="denuncias_type">
+                    <label for="denuncia">mal comportamento discente</label>
+                    <input type="radio" id="denuncia" hidden>
+                </div>
+                
+                <div class="denuncias_type">
+                    <label for="denuncia2">mal comportamento docente</label>
+                    <input type="radio" id="denuncia2" hidden>
+                </div>
+                
+                <div class="denuncias_type">
+                    <label for="denuncia3">estrutura escolar degradada</label>
+                    <input type="radio" id="denuncia3" hidden>
+                </div>
+                
+                <div class="denuncias_type">
+                    <label for="denuncia4">falta de qualidade da comida no restaurante ou da cantina</label>
+                    <input type="radio" id="denuncia4" hidden>
+                </div>
+               
+                <div class="denuncias_type">
+                    <label for="denuncia5">falta de seguranca na escola</label>
+                    <input type="radio" id="denuncia5" hidden>
+                </div>
+                
+                <div class="denuncias_type">
+                    <label for="denuncia6">assedio ou estupro</label>
+                    <input type="radio" id="denuncia6" hidden>
+                </div>
+
         </div>
 
         <div class="div_button2">
@@ -91,10 +192,13 @@
             <input type="checkbox" id="toggleDiv2" hidden>
         </div>
 
+
         <div class="div2">
-            <label for="">Faça sua denuncia</label>
-            <input type="text">
-        </div>    
+            <p>Faça sua denuncia</p>
+            <textarea rows="7" cols="100" placeholder="faça sua denuncia aqui"></textarea>
+
+        </div> 
+        
         <button>Enviar Resposta</button>
     </form>
 </body>
