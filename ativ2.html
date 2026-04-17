@@ -35,7 +35,7 @@
 
 
         form:has(#toggleDiv1:checked) .div_button2 {
-            display: block;
+            display: inline-block;
         }
 
         form:has(#toggleDiv2:checked) .div2  {
@@ -78,6 +78,9 @@
         }
         .div_button2  {
             display: none;
+            background-color: rgb(33, 116, 0);
+            color: rgb(247, 247, 247);
+            width: 50%;
         }
         
         .div_SN:has(#check:checked) .labelS {
@@ -112,6 +115,7 @@
        }
        div:hover {
             transform: scale(1.02);
+            cursor: pointer; 
        }
        option:hover {
             background-color: rgb(159, 159, 159);
@@ -120,6 +124,41 @@
        .denuncias_type {
         width: 96%;
        }
+       .denuncias_type:hover {
+            background-color: rgb(233, 233, 233);
+       }
+
+       .div1:has(#checkN:checked) .labelN {
+            color: red;
+        }
+
+        label:has(#denuncia:checked) .denuncias_type{
+            background-color: rgb(202, 202, 202);
+        }
+
+        .denuncias_type:has(#denuncia2:checked) {
+            background-color: rgb(202, 202, 202);
+        }
+
+        .denuncias_type:has(#denuncia3:checked) {
+            background-color: rgb(202, 202, 202);
+        }
+
+        .denuncias_type:has(#denuncia4:checked) {
+            background-color: rgb(202, 202, 202);
+        }
+
+        .denuncias_type:has(#denuncia5:checked) {
+            background-color: rgb(202, 202, 202);
+        }
+
+        .denuncias_type:has(#denuncia6:checked) {
+            background-color: rgb(202, 202, 202);
+        }
+
+        .div_SN label {
+            font-size: 1.17em;
+        }
 
     </style>
 </head>
@@ -154,35 +193,39 @@
         </div>
         
         <div class="div1">
-            <label for="" class="tipo">selecione o tipo de denuncia</label>
+            <label for="" class="tipo"><h3>Selecione o Tipo de Denuncia</h3></label>
+
+            <label for="denuncia">
                 <div class="denuncias_type">
                     <label for="denuncia">mal comportamento discente</label>
-                    <input type="radio" id="denuncia" hidden>
+                    <input type="radio" id="denuncia"  name="tipoDenuncia" hidden>
                 </div>
+            </label>
+                
                 
                 <div class="denuncias_type">
                     <label for="denuncia2">mal comportamento docente</label>
-                    <input type="radio" id="denuncia2" hidden>
+                    <input type="radio" id="denuncia2" name="tipoDenuncia" hidden>
                 </div>
                 
                 <div class="denuncias_type">
                     <label for="denuncia3">estrutura escolar degradada</label>
-                    <input type="radio" id="denuncia3" hidden>
+                    <input type="radio" id="denuncia3" name="tipoDenuncia" hidden>
                 </div>
                 
                 <div class="denuncias_type">
                     <label for="denuncia4">falta de qualidade da comida no restaurante ou da cantina</label>
-                    <input type="radio" id="denuncia4" hidden>
+                    <input type="radio" id="denuncia4" name="tipoDenuncia" hidden>
                 </div>
                
                 <div class="denuncias_type">
                     <label for="denuncia5">falta de seguranca na escola</label>
-                    <input type="radio" id="denuncia5" hidden>
+                    <input type="radio" id="denuncia5" name="tipoDenuncia" hidden>
                 </div>
                 
                 <div class="denuncias_type">
                     <label for="denuncia6">assedio ou estupro</label>
-                    <input type="radio" id="denuncia6" hidden>
+                    <input type="radio" id="denuncia6" name="tipoDenuncia" hidden>
                 </div>
 
         </div>
@@ -194,7 +237,7 @@
 
 
         <div class="div2">
-            <p>Faça sua denuncia</p>
+            <h3>Faça sua denuncia</h3>
             <textarea rows="7" cols="100" placeholder="faça sua denuncia aqui"></textarea>
 
         </div> 
