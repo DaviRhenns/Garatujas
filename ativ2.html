@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='pt-br'>
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
@@ -19,6 +19,12 @@
 
         button {
             display: none;
+            background-color: rgb(33, 116, 0);
+            color: rgb(247, 247, 247);
+            width: 50%;
+            padding: 1%;
+            border-radius: 50px;
+            border: none;
         }
 
         form:has(#check:checked) .escondido {
@@ -45,7 +51,7 @@
         }
         
         form:has(#toggleDiv2:checked) button {
-            display: block;
+            display: inline-block;
         }
 
         form {
@@ -132,8 +138,6 @@
             background-color: rgb(233, 233, 233);
        }
 
-      
-
         label:has(#denuncia:checked) .denuncias_type{
             background-color: rgb(202, 202, 202);
             transform: scale(1.02);
@@ -169,6 +173,26 @@
             font-size: 1.17em;
         }
 
+        .input_text {
+            width: 50%;
+            border-radius: 50px;
+            padding: 1%;
+            border: 1px solid rgb(209, 209, 209);
+        }
+
+        textarea {
+            border-radius: 5px;
+            padding: 1%;
+            border: 1px solid rgb(217, 217, 217);
+        }
+
+        footer {
+            background-color: rgb(33, 116, 0)
+            color: rgb(247, 247, 247);
+            padding: 1%;
+        }
+
+
     </style>
 </head>
 <body>
@@ -177,7 +201,7 @@
 
     <main>
 
-    <form action="get">
+    <form>
         <div class="div_SN">
             <label for="">Deseja se identificar?</label>
             <label for="check" class="labelS">SIM</label>
@@ -188,13 +212,11 @@
 
         <div class="escondido">
             <div class="div_esc_filho">
-                <label for="">Nome Completo:</label>
-                <input type="text">
+                <input class="input_text" type="text" placeholder="Digite seu nome completo aqui">
             </div>
             
             <div class="div_esc_filho">
-                <label for="">Turma:</label>
-                <input type="text">
+                <input class="input_text" type="text" placeholder="Digite o nome da sua turma aqui">
             </div>
             
         </div> 
@@ -273,4 +295,8 @@
 
     </main>
 </body>
+
+<footer>
+    <p>&copy; 2023 Denuncie IFC. Todos os direitos reservados. Davi da Silva Rhenns</p>
+</footer>
 </html>
