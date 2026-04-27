@@ -1,0 +1,241 @@
+body {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    color: rgb(45, 45, 45);
+    min-height: 1vh;
+}
+
+.escondido {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    gap: 1%;
+}
+
+button {
+    display: none;
+    background-color: rgb(33, 116, 0);
+    color: rgb(247, 247, 247);
+    width: 50%;
+    padding: 1%;
+    border-radius: 50px;
+    border: none;
+}
+
+form:has(#check:checked) .escondido {
+    display: block;
+}
+
+form:has(#toggleDiv1:checked) .div1 {
+    display: block;
+}
+
+
+
+form:has(#toggleDiv1:checked) .div_anterior1 {
+    display: block;
+}
+
+
+form:has(#toggleDiv1:checked) .div_button2 {
+    display: inline-block;
+}
+
+form:has(#toggleDiv2:checked) .div2 {
+    display: block;
+}
+
+form:has(#toggleDiv2:checked) button {
+    display: inline-block;
+}
+
+form {
+    width: 80%;
+    display: inline-block;
+    margin-top: 1%;
+}
+
+div {
+    transition: all 0.2s ease;
+    text-align: center;
+    margin: 1%;
+    width: 100%;
+    padding: 1%;
+    border-radius: 10px;
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgb(217, 217, 217);
+}
+
+form>div {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+    font-size: 120%;
+}
+
+header {
+    padding: 0.5%;
+    background-color: rgb(33, 116, 0);
+    color: rgb(255, 255, 255);
+}
+
+.div1 {
+    display: none;
+}
+
+.div2 {
+    display: none;
+}
+
+.div_button2 {
+    display: none;
+    background-color: rgb(33, 116, 0);
+    color: rgb(247, 247, 247);
+    width: 50%;
+}
+
+.div_SN:has(#check:checked) .labelS {
+    color: red;
+}
+
+.div_SN:has(#checkN:checked) .labelN {
+    color: red;
+    transform: scale(1.2);
+}
+
+.texto_denuncia {
+    width: 1000px;
+}
+
+.div_esc_filho {
+    width: 96%;
+}
+
+.div_button1 {
+    background-color: rgb(33, 116, 0);
+    color: rgb(247, 247, 247);
+    width: 50%;
+    display: inline-block;
+}
+
+.div_button1:hover {
+    transform: scale(1.05);
+    background-color: rgb(26, 93, 0);
+}
+
+input:hover {
+    transform: scale(1.02);
+}
+
+div:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+option:hover {
+    background-color: rgb(159, 159, 159);
+}
+
+.denuncias_type {
+    width: 96%;
+}
+
+.denuncias_type:hover {
+    background-color: rgb(233, 233, 233);
+}
+
+label:has(#denuncia:checked) .denuncias_type {
+    background-color: rgb(202, 202, 202);
+    transform: scale(1.02);
+}
+
+label:has(#denuncia2:checked) .denuncias_type {
+    background-color: rgb(202, 202, 202);
+    transform: scale(1.02);
+}
+
+label:has(#denuncia3:checked) .denuncias_type {
+    background-color: rgb(202, 202, 202);
+    transform: scale(1.02);
+}
+
+label:has(#denuncia4:checked) .denuncias_type {
+    background-color: rgb(202, 202, 202);
+    transform: scale(1.02);
+}
+
+label:has(#denuncia5:checked) .denuncias_type {
+    background-color: rgb(202, 202, 202);
+    transform: scale(1.02);
+}
+
+label:has(#denuncia6:checked) .denuncias_type {
+    background-color: rgb(202, 202, 202);
+    transform: scale(1.02);
+}
+
+
+.div_SN label {
+    font-size: 1.17em;
+}
+
+.input_text {
+    width: 50%;
+    border-radius: 50px;
+    padding: 1%;
+    border: 1px solid rgb(209, 209, 209);
+}
+
+textarea {
+    border-radius: 5px;
+    padding: 1%;
+    border: 1px solid rgb(217, 217, 217);
+}
+
+footer {
+    color: rgb(30, 30, 30);
+    padding: 1%;
+    bottom: 0;
+}
+
+main {
+    min-height: 80vh;
+}
+
+input[type='checkbox'] {
+    display: none;
+
+}
+
+input[type='checkbox']+label {
+    background-color: red;
+    color: white;
+    width: 40px;
+    height: 20px;
+    border-radius: 25px;
+    display: inline-block;
+
+    * {
+        padding: 0;
+    }
+}
+
+input[type="checkbox"]+label:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    left: 0%;
+    transition: .3s;
+}
+
+input[type="checkbox"]:checked+label {
+    background-color: green;
+}
+
+input[type="checkbox"]:checked+label:before {
+    left: 100%;
+    transform: translateX(-100%);
+}
