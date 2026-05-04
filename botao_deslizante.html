@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+    <meta charset='utf-8'>
+
+    <title>Denuncie IFC</title>
+    <style>
+        input[type='checkbox'] {
+    display: none;
+
+}
+
+input[type='checkbox']+label {
+    background-color: red;
+    color: white;
+    width: 40px;
+    height: 20px;
+    border-radius: 25px;
+    display: inline-block;
+
+    * {
+        padding: 0;
+    }
+}
+
+input[type="checkbox"]+label:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    left: 0%;
+    transition: .3s;
+}
+
+input[type="checkbox"]:checked+label {
+    background-color: green;
+}
+
+input[type="checkbox"]:checked+label:before {
+    left: 100%;
+    transform: translateX(-100%);
+}
+    </style>
+</head>
+<body>
+    <div>
+        <input type="checkbox" id="test" >
+        <label for="test"></label>
+            
+    </div>
+</body>
