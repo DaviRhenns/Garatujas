@@ -10,4 +10,14 @@ todo que esta dentro de head é meta dado e nao sera visto pelo usuario, apenas 
 
 quando usar o color, esta se referindo a cor do texto, nao do background
 
-no css, tudo é um quadrado originalmente, para arrendondar a borda, usamos a propriedade border-radius, para fazer circulos, e só usar o border-radius: 50%;
+no css, tudo é um quadrado originalmente, para arrendondar a borda, usamos a propriedade border-radius, para fazer circulos em quadrados, é só usar o border-radius: 50%;
+
+o codigo css :has(#check:checked) indica um elemento que tiver uma checkbox checada, muito utilizado para mudar a aparencia de algo quando a checkbox for checada
+
+o codigo :hover indica quando o mouse estiver em cima do elemento, muito utilizado para mudar a aparencia de algo quando o mouse estiver em cima
+
+display: inline-block; faz com que o elemento tenha comportamento tanato de "caixa" quanto de texto
+
+<strong> faz a tag ficar em negrito e é mais assistivo para leitores de texto do que <b>
+
+
