@@ -2,6 +2,12 @@
 
 HTML para o meu eu do futuro
 
+HTML = estrutura
+
+CSS = visual
+
+HTML não é uma linguagem de programação, é uma linguagem de marcação
+
 no html, existem varios modos para fazer uma mesma coisa, mas so uma esta certa
 
 divs sao como caixas, podemos mudar o tamanho e formato dessas "caixas" por meio do css
@@ -16,8 +22,33 @@ o codigo css :has(#check:checked) indica um elemento que tiver uma checkbox chec
 
 o codigo :hover indica quando o mouse estiver em cima do elemento, muito utilizado para mudar a aparencia de algo quando o mouse estiver em cima
 
-display: inline-block; faz com que o elemento tenha comportamento tanato de "caixa" quanto de texto
+font-size → tamanho da fonte
 
-<strong> faz a tag ficar em negrito e é mais assistivo para leitores de texto do que <b>
+border → borda(recebe a cor, o tamanho e o tipo da borda)
+
+margin → espaço externo
+
+padding → espaço interno
+
+border → borda
+
+display → comportamento do elemento
+
+display: inline; não ocupa a linha inteira e não aceita largura e altura
+
+display: block; ocupa a linha inteira, não importa o seu tamanho(aceita largura e altura)
+
+display: inline-block; não ocupa a linha inteira e não aceita largura e altura
+
+display: flex; cria um container flexível para alinhar itens facilmente (horizontal/vertical).
+
+display: grid; cria layouts em grade (linhas e colunas).
+
+display: none; esconde o elemento completamente.
+
+< strong > faz a tag ficar em negrito e é mais assistivo para leitores de texto do que < b >
+
+
+
 
 
